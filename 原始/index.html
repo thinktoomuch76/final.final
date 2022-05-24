@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>CHI-HENG, LI</title>
+<link rel="icon" href="pic/icon.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--宣告css的樣式 外部連結-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+        display: none
+    }
+</style>
+
+<body>
+
+    <!-- 最上排的選單 當點擊時會使用myfunction的javascript class為css的樣式 -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">首頁</a>
+            <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">聯絡我</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <!--類似下拉式選單 但只要滑過去就會下拉-->
+                <button class="w3-padding-large w3-button" title="More"><a href=個人資料.html style="text-decoration:none;">個人資料</a><i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <!--#是id超連結-->
+                    <a href="個人資料.html#自我介紹" class="w3-bar-item w3-button">自我介紹</a>
+                    <a href="個人資料.html#求學經歷" class="w3-bar-item w3-button">求學經歷</a>
+                    <a href="個人資料.html#校外競賽" class="w3-bar-item w3-button">校外競賽</a>
+                    <a href="個人資料.html#專業證照" class="w3-bar-item w3-button">專業證照</a>
+                </div>
+            </div>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <!--類似下拉式選單 但只要滑過去就會下拉-->
+                <button class="w3-padding-large w3-button" title="More"><a href=個人作品.html style="text-decoration:none;">個人作品</a><i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <!--#是id超連結-->
+                    <a href="個人作品.html#影片" class="w3-bar-item w3-button">影片</a>
+                    <a href="個人作品.html#APP" class="w3-bar-item w3-button">APP</a>
+                    <a href="個人作品.html#遊戲" class="w3-bar-item w3-button">遊戲</a>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+                    class="fa fa-search"></i></a>
+        </div>
+    </div>
+
+    <!-- 有宣告myfuntion的javascript 移上去時會讓方塊變成灰色 -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#個人資料" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">個人資料</a>
+        <a href="#自我介紹" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">自我介紹</a>
+        <a href="#聯絡我" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">聯絡我</a>
+        <a href="#求學經歷" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">求學經歷</a>
+        <a href="#影片" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">影片</a>
+        <a href="#APP" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">APP</a>
+        <a href="#遊戲" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">遊戲</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+    </div>
+
+    <!-- 頁面內容及css樣式 -->
+    <div class="w3-content" style="max-width:1000px;margin-top:46px">
+        <!-- 圖片1幻燈片設定 有mySlides的javascript -->
+        <div class="mySlides w3-display-container w3-center">
+            <img src="pic/p1.png" style="width:95%;height: 70%;">
+        </div>
+        <!-- 圖片2幻燈片設定 有mySlides的javascript -->
+        <div class="mySlides w3-display-container w3-center">
+            <img src="pic/p2.png" style="width:95%;height: 100%;">
+        </div>
+        <!-- 圖片2幻燈片設定 有mySlides的javascript -->
+        <div class="mySlides w3-display-container w3-center">
+            <img src="pic/p3.png" style="width:95%;height: 70%;">
+        </div>
+
+        <!-- 網頁中間部分 主要介紹 -->
+        <div class="w3-container w3-content w3-padding-64" id="自我介紹">
+            <h2 class="w3-wide" style="text-align: center;background-color:darkgrey;"><b>自我介紹</b></h2>
+            <p>大家好我是奇衡!!我有著南部小孩特有的<b>熱情、開朗及好相處的個性</b>，創新點子也特別的多，父母希望我能夠追尋自己的興趣
+                ，去做喜歡做的事情，並教育我必須要能夠為自己的人生負責，秉持著每個人有自己的本分，去完成自己所需要的學經歷，並利用
+                空閒時間培養其他興趣專長。而我認為自己最大的優點就是<b>創意點子多、勇於嘗試各種事物且對任何事情皆懷有熱忱</b>，五專時雖然
+                <b>主修護理</b>，卻也利用了課餘時間學習了第二專長「資訊能力」，在「創新能力」的部分也發明了許多的輔具，利用創意解決了長者
+                生活上的問題，而現在的我正就讀國立臺北護理健康大學_醫護教育暨數位學習系，持續精進自己的資訊能力，學習製作醫護教材、VR、動畫、影片拍攝剪輯、APP、電子書及遊戲等，夢想是<b>利用自己的專業改善偏鄉學生的學習方式及增加篇鄉居民的醫護知識</b>。</p>
+            <div class="w3-row w3-padding-64"  id="求學經歷">
+                <h2 class="w3-wide" style="text-align: center;background-color:darkgrey;"><b>求學經歷</b></h2>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th style="width: 50%;"><img src="pic/ntust.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width: 40%"></th>
+                        <td>
+                            <ul style="float: left;font-size: 20px;">
+                                <li><b>國立臺灣科技大學</b></li>
+                                <li><b>預計2022年9月入學</b></li>
+                                <li><b>數位學習與教育研究所</b></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="width: 50%;"><img src="pic/ntunhs.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width: 40%"></th>
+                        <td>
+                            <ul style="float: left;font-size: 20px;">
+                                <li><b>國立臺北護理健康大學</b></li>
+                                <li><b>2020年9月迄今</b></li>
+                                <li><b>醫護教育暨數位學習系</b></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="width: 50%;"><img src="pic/szmc.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width: 40%"></th>
+                        <td>
+                            <ul style="float: left;font-size: 20px;">
+                                <li><b>樹人醫護管理專科學校</b></li>
+                                <li><b>2018年9月至2020年6月</b></li>
+                                <li><b>護理科</b></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="width: 50%;"><img src="pic/kms.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width: 40%"></th>
+                        <td>
+                            <ul style="float: left;font-size: 20px;">
+                                <li><b>高美醫護管理專科學校</b></li>
+                                <li><b>2015年9月至2018年6月</b></li>
+                                <li><b>護理科</b></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="w3-row w3-padding-64 w3-center" id="校外競賽">
+                <h2 class="w3-wide" style="text-align: center;background-color:darkgrey;"><b>校外競賽</b></h2>
+                <div>
+                    <h2 class="w3-wide" style="text-align: center;font-size: large;"><b>發明展</b></h2>
+                    <div class="w3-third" style="display: inline-block;">
+                        <!-- 放上標題及圖片 -->
+                        <p>2019 泰國國際發明展_銀牌</p>
+                        <img src="pic/thailand.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>2018高雄國際發明展_金牌</p>
+                        <img src="pic/kG.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>2018高雄國際發明展_銀牌</p>
+                        <img src="pic/kS.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                        </div>
+                </div>
+                <div style="display: inline-block;">
+                    <h2 class="w3-wide" style="text-align: center;font-size: large;"><b>行銷企劃</b></h2>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>2021 TBSA 全國大專創新企劃競賽<br>佳作</p>
+                        <img src="pic/2021TBSA.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>2017 TBSA 全國大專創新企劃競賽<br>佳作</p>
+                        <img src="pic/2017TBSA.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>2016全國大專院校互聯網商務<br>實戰擂台_特別獎</p>
+                        <img src="pic/2016.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                </div>
+                <div style="display: inline-block;">
+                    <h2 class="w3-wide" style="text-align: center;font-size: large;"><b>電腦應用</b></h2>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>2016 MOS 世界盃電腦應用技能競賽Excel 2013_全國總決賽第一名</p>
+                        <img src="pic/Excel 2013_first.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>2016 MOS 世界盃電腦應用技能競賽Word 2013_南區第二名</p>
+                        <img src="pic/Word 2013_second.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>2016 MOS 世界盃電腦應用技能競賽Excel 2013_南區第三名</p>
+                        <img src="pic/Excel 2013_third.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>第六屆簡報達人頂尖新秀爭霸戰PowerPoint 2010_全國佳作</p>
+                        <img src="pic/PowerPoint 2010_N.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>第六屆簡報達人頂尖新秀爭霸戰PowerPoint 2010_南區賽第七名</p>
+                        <img src="pic/PowerPoint 2010_S.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                </div>
+            </div>
+            <div class="w3-row w3-padding-64 w3-center" id="專業證照">
+                <h2 class="w3-wide" style="text-align: center;background-color:darkgrey;"><b>專業證照</b></h2>
+                <div style="display: inline-block;">
+                    <h2 class="w3-wide" style="text-align: center;font-size: large;"><b>電腦相關</b></h2>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>Microsoft office specialist Excel 2013</p>
+                        <img src="pic/Excel 2013.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>Microsoft office specialist Word 2013</p>
+                        <img src="pic/Word 2013.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>Microsoft office specialist PowerPoint 2013</p>
+                        <img src="pic/p2013.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>Microsoft office specialist PowerPoint 2010</p>
+                        <img src="pic/p2010.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                </div>
+                <div style="display: inline-block;">
+                    <h2 class="w3-wide" style="text-align: center;font-size: large;"><b>語言相關</b></h2>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>TOEIC Listening and Reading Test 590分</p>
+                        <img src="pic/toeic.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>全民英語能力分級檢定_初級</p>
+                        <img src="pic/GEPT.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-third">
+                        <!-- 放上標題及圖片 -->
+                        <p>客語能力認證考試_中級</p>
+                        <img src="pic/hakka.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                </div>
+                <div style="display: inline-block;">
+                    <h2 class="w3-wide" style="text-align: center;font-size: large;"><b>醫護相關</b></h2>
+                    <div class="w3-half">
+                        <!-- 放上標題及圖片 -->
+                        <p>護理師</p>
+                        <img src="pic/nurse.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                    <div class="w3-half">
+                        <!-- 放上標題及圖片 -->
+                        <p>BLS 基本救命術</p>
+                        <img src="pic/bls.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- 網頁下面部分 主要介紹 -->
+        <div class="w3-black w3-center" id="影片">
+            <div class="w3-container w3-padding-64">
+                 <!-- 放上標題及內文 -->
+                <h2 class="w3-wide w3-center">影片</h2>
+
+                <div style="display: inline-block;">
+                    <div class="w3-third w3-margin-bottom"  >
+                        <iframe src="https://www.youtube.com/embed/RmM9S_vLOjU" frameborder="0" style="width: 100%; height: 300px;"></iframe>
+                        <div class="w3-container w3-white">
+                            <!-- 放上標題及內文 -->
+                            <p><b>糖衣陷阱</b></p>
+                            <p class="w3-opacity">職位:主角、剪輯、攝影</p>
+                            <p>糖尿病並不可怕，可怕的是你忽略了它。主角奇哥年紀輕輕就確診了糖尿病，雖然驗光師及護理都給予充足的衛教，但他並不以為意，仍然大吃大喝毫不忌口，最後昏迷被送到了急診室，腳了壞死一大部分，眼睛也病變，才悔不當初……</p>
+                        </div>
+                    </div>
+                    <div class="w3-third w3-margin-bottom">
+                         <!-- 放上圖片 -->
+                         <iframe src="https://www.youtube.com/embed/lZaVYQjfuVo" frameborder="0" style="width:100%; height: 300px;"></iframe>
+                        <div class="w3-container w3-white">
+                            <!-- 放上標題及內文 -->
+                            <p><b>網路交友與網路詐騙</b></p>
+                            <p class="w3-opacity">職位:主角、攝影</p>
+                            <p>主角李奇在交友軟體上認識女性朋友，但他忘記了網路交友的危險性，不只是被騙了感情，更是被騙了個人資料及財產，最後還背了詐騙的黑鍋，被警察給約談。騙手法日新月異，如果遇到疑似詐騙的狀況，可以撥打165反詐騙專線，以免成為一下個受害者。</p>
+
+                        </div>
+                    </div>
+                    <div class="w3-third w3-margin-bottom">
+                        <!-- 放上圖片 -->
+                        <iframe src="https://www.youtube.com/embed/rhVQw6Qhktg" frameborder="0" style="width:100%; height: 300px;"></iframe>
+                        <div class="w3-container w3-white">
+                            <!-- 放上標題及內文 -->
+                            <p><b>關懷科技議題＿Yeetalk</b></p>
+                            <p class="w3-opacity">職位:主角、攝影</p>
+                            <p>YeeTalk是我們利用Smart Apps Creator所製作的APP，以幫助無法用言語溝通的民眾，不只是發出單字，它更能提供口語化的句子，來幫助使用者溝通，也貼心的加上了【迷路】按鈕，以防遇到迷路但不知道怎麼溝通的狀況，也可以客製化按鈕，來達到更好的溝通。</p>
+                            <!-- 點及按鈕會另外跑到購票模式的javascript -->
+                        </div>
+                    </div>
+                </div>
+                <div style="display: inline-block;">
+                    <div class="w3-third w3-margin-bottom"  >
+                        <iframe src="https://www.youtube.com/embed/kGOnR40DXzM" frameborder="0" style="width: 100%; height: 300px;"></iframe>
+                        <div class="w3-container w3-white" style="height: 270px;" >
+                            <!-- 放上標題及內文 -->
+                            <p><b>居家隔離/檢疫及自主健康管理快速理解</b></p>
+                            <p class="w3-opacity">職位:動畫製作</p>
+                            <p>利用POWTOON製作一個三分鐘的影片，讓民眾可以快速理解居家隔離/檢疫以及自主健康管理，天數、對象、注意事項以及就醫原則，利用動畫的方式取代大量的文字，加上旁白幫助更好的記憶重點。</p>
+                        </div>
+                    </div>
+                    <div class="w3-third w3-margin-bottom">
+                         <!-- 放上圖片 -->
+                         <iframe src="https://www.youtube.com/embed/TlaRmELPKMM" frameborder="0" style="width:100%; height: 300px;"></iframe>
+                        <div class="w3-container w3-white" style="height: 270px;">
+                            <!-- 放上標題及內文 -->
+                            <p><b>【護理創新】不讓你動約束帶-製作過程</b></p>
+                            <p class="w3-opacity">職位:創新設計、製作、攝影、剪輯</p>
+                            <p>在高雄榮民總醫院92病房實習時，所創作的護理創新「不讓你動約束帶」。在實習時發現，對於混亂的病患，最常見的護理措施就是約束，但是當病人身上的管路或是約束造成不適感，反而會使病人更加的抵抗，在保護病人的當下也傷害了病人，故運用創造力及思考後，目標在不影響醫療處置的狀況下，讓病人手指處可以活動自如，又兼顧病人有效的約束且不發生拔管意外，創新發明了「不讓你動約束帶」! </p>
+
+                        </div>
+                    </div>
+                    <div class="w3-third w3-margin-bottom">
+                        <!-- 放上圖片 -->
+                        <iframe src="https://www.youtube.com/embed/RVDXCaO0o-I" frameborder="0" style="width:100%; height: 300px;"></iframe>
+                        <div class="w3-container w3-white" style="height: 270px;">
+                            <!-- 放上標題及內文 -->
+                            <p><b>【護理創新】多功能深層按摩器-簡報版</b></p>
+                            <p class="w3-opacity">職位:創新設計、製作</p>
+                            <p>產房總是充滿了生之喜悅，但媽媽們在展露歡顏之前的待產時間，卻必須承受莫大的不舒適感，準媽媽在產房待產時，一陣陣疼痛令人難以忍受，先生或家屬在一旁卻使不上力，無法分擔產婦的痛苦，也常顯得焦慮。做此作品的動機是希望透過自製按摩工具與衛教本教導父母親一些生心理的知識，由主要照顧者提供按摩來協助產婦，並緩解待產婦下背部的疼痛，渡過待產期間的不適，間接地拉近彼此關係。</p>
+                            <!-- 點及按鈕會另外跑到購票模式的javascript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-container" id="APP">
+                 <!-- 放上標題及內文 -->
+                <h2 class="w3-wide w3-center">APP</h2>
+
+                <div style="display: inline-block;">
+                    <div class="w3-half w3-margin-bottom w3-center"  >
+                        <a href="app/food.apk"><img src="pic/food.png" style="width: 300px;height: 550px;"></a>
+                        <div class="w3-container w3-white" style="height: 200px;">
+                            <!-- 放上標題及內文 -->
+                            <p><b>北護美食選擇器(點擊圖片可下載 限安卓系統)</b></p>
+                            <p class="w3-opacity">職位:程式設計</p>
+                            <p>來到北護但是附近的美食太多了不知道怎麼選嗎?沒關西現在提供給你北護美食選擇器!提供你最佳的選擇，還可以查看店家的評價喔!</p>
+                        </div>
+                    </div>
+                    <div class="w3-half w3-margin-bottom w3-center">
+                         <!-- 放上圖片 -->
+                         <a href="app/old.apk"><img src="pic/old.png" style="width: 300px;height: 550px;"></a>
+                        <div class="w3-container w3-white" style="height: 200px;">
+                            <!-- 放上標題及內文 -->
+                            <p><b>長者健康雲端回報App(點擊圖片可下載 限安卓系統)</b></p>
+                            <p class="w3-opacity">職位:程式設計</p>
+                            <p>行動版的健康回報系統!提供BMI、血壓、體溫等數據回報及判讀，可及時線上回報也可線上觀看所有管理者的資訊喔!</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="w3-wide w3-center" id="遊戲">遊戲</h2>
+
+               <div style="display: inline-block;">
+                   <div class="w3-margin-bottom w3-center"  >
+                        <iframe src="https://scratch.mit.edu/projects/460334596/embed" allowtransparency="true" width="800" height="650" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                       <div class="w3-container w3-white" style="height: 150px;">
+                           <!-- 放上標題及內文 -->
+                           <p><b>HVMP新冠病毒衛教小遊戲</b></p>
+                           <p class="w3-opacity">職位:程式設計</p>
+                           <p>這是我們利用Scratch所製作的新冠病毒衛教小遊戲，以Covid-19疫情作為背景，主角必須要防疫相關的用品，如:酒精、肥皂、口罩等，來消滅病毒，到了最後，解鎖最終武器【疫苗槍】來打敗BOSS!</p>
+                       </div>
+                   </div>
+                   <div class="w3-margin-bottom w3-center">
+                        <!-- 放上圖片 -->
+                        <a href="app/AIDS HUNTER.exe"><img src="pic/AIDSHUNTER.png"></a>
+                       <div class="w3-container w3-white" style="height: 150px;">
+                           <!-- 放上標題及內文 -->
+                           <p><b>AIDS HUNTER愛滋病衛教小遊戲(點擊圖片可下載 限電腦)</b></p>
+                           <p class="w3-opacity">職位:程式設計</p>
+                           <p>這是利用Smart Apps Creator所製作的AIDS衛教小遊戲!裡用手中的魔法卡或陷阱卡打敗敵人_烏塔嘉內瑟(無套加內射)，手中的卡片下方都有說明，將正確的敘述打出來就可攻擊敵人，只要攻擊成功五次即可打敗敵人!
+                            【點擊圖片可下載試玩喔!】</p>
+                        </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+
+
+        
+    </div>
+    <!-- 聯繫方式的設定 -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="聯絡我">
+        <!-- 標題及內文 -->
+        <h2 class="w3-wide w3-center">聯絡我</h2>
+        <div class="w3-row w3-padding-32">
+            <div class="w3-col m6 w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker" style="width:30px"></i> 新北市淡水區濱海路三段148巷36號7樓<br>
+                <i class="fa fa-phone" style="width:30px"></i> 0982567086<br>
+                <i class="fa fa-envelope" style="width:30px"> </i> lsps7667@gmail.com<br>
+                <i class="fa fa-facebook-official" style="width:30px"></i>李奇衡<br>
+                <i class="fa fa-instagram" style="width:30px"></i>thinktoomuch76<br>
+            </div>
+            <div class="w3-col m6">
+                <form name="表單" method="POST">
+                    
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <!-- input方塊 -->
+                            <input class="w3-input w3-border" type="text" placeholder="姓名" name="姓名" required>
+                        </div>
+                        <div class="w3-half">
+                            <!-- input方塊 -->
+                            <input class="w3-input w3-border" type="email" placeholder="Email" name="Email" required>
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="訊息" name="訊息" required>
+                    <input class="w3-input w3-border" type="text" placeholder="訊息" name="訊息" required>
+                    <div id="form_alerts"></div>
+                    <button class="w3-button w3-black w3-section w3-right" type="submit">送出</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbxG9sJC1PQqde7DvIiKZllWWvKK0nnomrcTRcmZpXdPdcQ2OBebB13o8OheCm3c2r0/exec"
+        const form = document.forms['表單']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => $("#form_alerts").html("<div class='alert alert-success'>已收到您的訊息!</div>"))
+            .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>無法傳送您的訊息!</div>"))
+        })
+        // 每4秒會幻燈片一次
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000);
+        }
+
+        // 移到選向上時格子會變色
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // 購票模式 如果點擊其他地方時會關閉視窗
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
