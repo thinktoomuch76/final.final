@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 網頁標題 -->
+<title>CHI-HENG, LI-個人作品</title>
+<!-- 網頁icon -->
+<link rel="icon" href="pic/icon.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--宣告css的樣式 外部連結-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+        display: none
+    }
+</style>
+
+<body>
+
+    <!-- 最上排的選單 當點擊時會使用myfunction的javascript class為css的樣式 -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="首頁.html" class="w3-bar-item w3-button w3-padding-large">首頁</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <!--類似下拉式選單 但只要滑過去就會下拉-->
+                <button class="w3-padding-large w3-button" title="More"><a href=醫教獎介紹.html style="text-decoration:none;">醫教獎介紹</a><i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                            <!--#是id超連結-->
+                    <a href="醫教獎介紹.html#創辦人" class="w3-bar-item w3-button">創辦人</a>
+                    <a href="醫教獎介紹.html#歷史" class="w3-bar-item w3-button">歷史</a>
+                    <a href="醫教獎介紹.html#創作理念" class="w3-bar-item w3-button">創作理念</a>
+                 </div>
+             </div>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <!--類似下拉式選單 但只要滑過去就會下拉-->
+                <button class="w3-padding-large w3-button" title="More"><a href=所有作品.html style="text-decoration:none;">所有作品</a><i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <!--#是id超連結-->
+                    <a href="所有作品.html#影片" class="w3-bar-item w3-button">影片</a>
+                    <a href="所有作品.html#APP" class="w3-bar-item w3-button">APP</a>
+                    <a href="所有作品.html#遊戲" class="w3-bar-item w3-button">遊戲</a>
+                    <a href="所有作品.html#遊戲" class="w3-bar-item w3-button">動畫</a>
+                    <a href="所有作品.html#遊戲" class="w3-bar-item w3-button">程式</a>
+                    <a href="所有作品.html#遊戲" class="w3-bar-item w3-button">VR</a>
+                </div>
+            </div>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <!--類似下拉式選單 但只要滑過去就會下拉-->
+                <button class="w3-padding-large w3-button" title="More"><a href=得獎作品.html style="text-decoration:none;">得獎作品</a><i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <!--#是id超連結-->
+                    <a href="得獎作品.html#最佳男主角" class="w3-bar-item w3-button">最佳男主角</a>
+                    <a href="得獎作品.html#最感動影片獎" class="w3-bar-item w3-button">最感動影片獎</a>
+                    <a href="得獎作品.html#最辛苦拍攝獎" class="w3-bar-item w3-button">最辛苦拍攝獎</a>
+                    <a href="得獎作品.html#最佳導演獎" class="w3-bar-item w3-button">最佳導演獎</a>
+                    <a href="得獎作品.html#最佳劇本獎" class="w3-bar-item w3-button">最佳劇本獎</a>
+                    <a href="得獎作品.html#最佳動畫" class="w3-bar-item w3-button">最佳動畫</a>
+                    <a href="得獎作品.html#最佳遊戲" class="w3-bar-item w3-button">最佳遊戲</a>
+                    <a href="得獎作品.html#最佳程式獎" class="w3-bar-item w3-button">最佳程式獎</a>
+                </div>
+            </div>
+            <a href="聯絡我.html" class="w3-bar-item w3-button w3-padding-large">聯絡我</a>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+                    class="fa fa-search"></i></a>
+        </div>
+    </div>
+
+    <div class="w3-black w3-center w3-container">
+        <!-- 圖片1幻燈片設定 有mySlides的javascript -->
+        <div class="mySlides w3-display-container w3-center">
+            <img src="pic/poster-wide.png" style="width: 1500px;height: 800px;"></div>
+    </div>
+    
+
+    <!-- 有宣告myfuntion的javascript 移上去時會讓方塊變成灰色 -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#個人資料" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">個人資料</a>
+        <a href="#自我介紹" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">自我介紹</a>
+        <a href="#聯絡我" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">聯絡我</a>
+        <a href="#求學經歷" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">求學經歷</a>
+        <a href="#影片" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">影片</a>
+        <a href="#APP" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">APP</a>
+        <a href="#遊戲" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">遊戲</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+    </div>
+
+        <!-- 網頁下面部分 主要介紹 -->
+        <div class="w3-black w3-center" id="影片">
+            <div class="w3-container w3-padding-64">
+                 <!-- 放上標題及內文 -->
+                <h2 class="w3-wide w3-center">影片</h2>
+                <!-- YT連結 -->
+                <div style="display: inline-block;">
+                    <div class="w3-third w3-margin-bottom"  >
+                        <iframe src="https://www.youtube.com/embed/RmM9S_vLOjU" frameborder="0" style="width: 100%; height: 300px;"></iframe>
+                        <div class="w3-container w3-white">
+                            <!-- 放上標題及內文 -->
+                            <p><b>糖衣陷阱</b></p>
+                            <p class="w3-opacity">職位:主角、剪輯、攝影</p>
+                            <p>糖尿病並不可怕，可怕的是你忽略了它。主角奇哥年紀輕輕就確診了糖尿病，雖然驗光師及護理都給予充足的衛教，但他並不以為意，仍然大吃大喝毫不忌口，最後昏迷被送到了急診室，腳了壞死一大部分，眼睛也病變，才悔不當初……</p>
+                        </div>
+                    </div>
+                    <div class="w3-third w3-margin-bottom">
+                         <!-- YT連結 -->
+                         <iframe src="https://www.youtube.com/embed/lZaVYQjfuVo" frameborder="0" style="width:100%; height: 300px;"></iframe>
+                        <div class="w3-container w3-white">
+                            <!-- 放上標題及內文 -->
+                            <p><b>網路交友與網路詐騙</b></p>
+                            <p class="w3-opacity">職位:主角、攝影</p>
+                            <p>主角李奇在交友軟體上認識女性朋友，但他忘記了網路交友的危險性，不只是被騙了感情，更是被騙了個人資料及財產，最後還背了詐騙的黑鍋，被警察給約談。騙手法日新月異，如果遇到疑似詐騙的狀況，可以撥打165反詐騙專線，以免成為一下個受害者。</p>
+
+                        </div>
+                    </div>
+                    <div class="w3-third w3-margin-bottom">
+                        <!-- YT連結 -->
+                        <iframe src="https://www.youtube.com/embed/rhVQw6Qhktg" frameborder="0" style="width:100%; height: 300px;"></iframe>
+                        <div class="w3-container w3-white">
+                            <!-- 放上標題及內文 -->
+                            <p><b>關懷科技議題＿Yeetalk</b></p>
+                            <p class="w3-opacity">職位:主角、攝影</p>
+                            <p>YeeTalk是我們利用Smart Apps Creator所製作的APP，以幫助無法用言語溝通的民眾，不只是發出單字，它更能提供口語化的句子，來幫助使用者溝通，也貼心的加上了【迷路】按鈕，以防遇到迷路但不知道怎麼溝通的狀況，也可以客製化按鈕，來達到更好的溝通。</p>
+                            <!-- 點及按鈕會另外跑到購票模式的javascript -->
+                        </div>
+                    </div>
+                </div>
+                <div style="display: inline-block;">
+                    <div class="w3-half w3-margin-bottom"  >
+                        <!-- YT連結 -->
+                        <iframe src="https://www.youtube.com/embed/Fha52UZwgTM" frameborder="0" style="width: 100%; height: 400px;"></iframe>
+                        <div class="w3-container w3-white" style="height: 270px;" >
+                            <!-- 放上標題及內文 -->
+                            <p><b>潛腸危機</b></p>
+                            <p class="w3-opacity">職位:主角、攝影、剪輯</p>
+                            <p>主角平時是一個不常運動、愛熬夜、愛吃垃圾食物的學生，在朋友們的引導下，漸漸地體會到了預防大腸癌的重要性，決定對自己實施一個預防大腸癌的一週生活挑戰，並以自身體驗的方式，帶領觀眾感受一週預防大腸癌的生活，包含了健康飲食(高纖、少鹽、少油)、規律運動(一週5次每次30分鐘)及充足睡眠(7個半小時)，鏡頭多以自拍類似Vlog的方式呈現，影片中穿插專家的訪談及趣味小劇場，增加了影片的豐富度及觀賞性，也利用InBody的前後側增加了影片的真實性及主要想宣導的事項。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-half w3-margin-bottom">
+                         <!-- YT連結 -->
+                         <iframe src="https://www.youtube.com/embed/H2w0l1hy978" frameborder="0" style="width:100%; height: 400px;"></iframe>
+                        <div class="w3-container w3-white" style="height: 270px;">
+                            <!-- 放上標題及內文 -->
+                            <p><b>醉後一面</b></p>
+                            <p class="w3-opacity">職位:主角、攝影、剪輯</p>
+                            <p>講述一名男子是位普通的上班族，平時與老婆過著平凡幸福的日子，某天因工作成績不好而被主管訓話，心情不好的他在女同事的邀約下，最後去聚餐飲酒並以「加班」為由，推掉了與丈母娘的生日聚餐，在飲酒後仍開車去接老婆，卻發生了憾事，一切發生驟變…
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-container" id="APP">
+                 <!-- 放上標題及內文 -->
+                <h2 class="w3-wide w3-center">APP</h2>
+                <!-- 照片並加上超連結 下載檔案 -->
+                <div style="display: inline-block;">
+                    <div class="w3-half w3-margin-bottom w3-center"  >
+                        <a href="app/food.apk"><img src="pic/food.png" style="width: 300px;height: 550px;"></a>
+                        <div class="w3-container w3-white" style="height: 200px;">
+                            <!-- 放上標題及內文 -->
+                            <p><b>北護美食選擇器(點擊圖片可下載 限安卓系統)</b></p>
+                            <p class="w3-opacity">職位:程式設計</p>
+                            <p>來到北護但是附近的美食太多了不知道怎麼選嗎?沒關西現在提供給你北護美食選擇器!提供你最佳的選擇，還可以查看店家的評價喔!</p>
+                        </div>
+                    </div>
+                    <div class="w3-half w3-margin-bottom w3-center">
+                         <!-- 照片並加上超連結 下載檔案 -->
+                         <a href="app/old.apk"><img src="pic/old.png" style="width: 300px;height: 550px;"></a>
+                        <div class="w3-container w3-white" style="height: 200px;">
+                            <!-- 放上標題及內文 -->
+                            <p><b>長者健康雲端回報App(點擊圖片可下載 限安卓系統)</b></p>
+                            <p class="w3-opacity">職位:程式設計</p>
+                            <p>行動版的健康回報系統!提供BMI、血壓、體溫等數據回報及判讀，可及時線上回報也可線上觀看所有管理者的資訊喔!</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="w3-wide w3-center" id="遊戲">遊戲</h2>
+                <!-- 外部嵌入scratch的作品 -->
+               <div style="display: inline-block;">
+                   <div class="w3-margin-bottom w3-center"  >
+                        <iframe src="https://scratch.mit.edu/projects/460334596/embed" allowtransparency="true" width="800" height="650" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                       <div class="w3-container w3-white" style="height: 150px;">
+                           <!-- 放上標題及內文 -->
+                           <p><b>HVMP新冠病毒衛教小遊戲</b></p>
+                           <p class="w3-opacity">職位:程式設計</p>
+                           <p>這是我們利用Scratch所製作的新冠病毒衛教小遊戲，以Covid-19疫情作為背景，主角必須要防疫相關的用品，如:酒精、肥皂、口罩等，來消滅病毒，到了最後，解鎖最終武器【疫苗槍】來打敗BOSS!</p>
+                       </div>
+                   </div>
+                   <div class="w3-margin-bottom w3-center">
+                        <!-- 照片並加上超連結 下載檔案(此檔案因為過大所以沒有上傳至github) -->
+                        <a href="app/AIDS HUNTER.exe"><img src="pic/AIDSHUNTER.png"></a>
+                       <div class="w3-container w3-white" style="height: 150px;">
+                           <!-- 放上標題及內文 -->
+                           <p><b>AIDS HUNTER愛滋病衛教小遊戲(點擊圖片可下載 限電腦)</b></p>
+                           <p class="w3-opacity">職位:程式設計</p>
+                           <p>這是利用Smart Apps Creator所製作的AIDS衛教小遊戲!裡用手中的魔法卡或陷阱卡打敗敵人_烏塔嘉內瑟(無套加內射)，手中的卡片下方都有說明，將正確的敘述打出來就可攻擊敵人，只要攻擊成功五次即可打敗敵人!
+                            【點擊圖片可下載試玩喔!】</p>
+                        </div>
+            <h2 class="w3-wide w3-center" id="動畫">動畫</h2>
+                <!-- 外部嵌入scratch的作品 -->
+                <div class="w3-half w3-margin-bottom"  >
+                    <!-- YT連結 -->
+                    <iframe src="https://www.youtube.com/embed/kGOnR40DXzM" frameborder="0" style="width: 100%; height: 400px;"></iframe>
+                    <div class="w3-container w3-white" style="height: 270px;" >
+                        <!-- 放上標題及內文 -->
+                        <p><b>居家隔離/檢疫及自主健康管理快速理解</b></p>
+                        <p class="w3-opacity">職位:動畫製作</p>
+                        <p>利用POWTOON製作一個三分鐘的影片，讓民眾可以快速理解居家隔離/檢疫以及自主健康管理，天數、對象、注意事項以及就醫原則，利用動畫的方式取代大量的文字，加上旁白幫助更好的記憶重點。</p>
+                    </div>
+                </div>
+                <div class="w3-half w3-margin-bottom"  >
+                    <!-- YT連結 -->
+                    <iframe src="https://www.youtube.com/embed/NFSULm3z9ZQ" frameborder="0" style="width: 100%; height: 400px;"></iframe>
+                    <div class="w3-container w3-white" style="height: 270px;" >
+                        <!-- 放上標題及內文 -->
+                        <p><b>保命跌對跌</b></p>
+                        <p class="w3-opacity">職位:動畫製作</p>
+                        <p>利用Vyond製作台語版的肌肉訓練衛教動畫，配合eko studio做出互動式的動畫，讓觀眾可以根據動畫做出自己的選擇。</p>
+                    </div>
+                </div>
+            <h2 class="w3-wide w3-center" id="程式">程式</h2>
+                <!-- 外部嵌入scratch的作品 -->
+                <div class="w3-center w3-half"  >
+                    <!-- YT連結 -->
+                       <iframe src="https://www.youtube.com/embed/KoOsSnCEUVA" frameborder="0" style="width: 100%; height: 400px;"></iframe>
+                       <div class="w3-container w3-white" style="height: 270px;" >
+                           <!-- 放上標題及內文 -->
+                        <p><b>瘟疫危機</b></p>
+                           <p class="w3-opacity">職位:教案設計、程式製作</p>
+                        <p>利用Python所製作的角色扮演遊戲遊戲，以醫院作為場景，醫護人員為主角，各種細菌病毒為敵人，以做選擇題為戰鬥方式，選擇題內容以國中健教課考題及其他醫護相關考題為主，只要答對選擇題就可以消滅敵人，若答錯題目就會受到傷害，在遊戲中主角要不斷的往醫院的高樓層前進，去查出疫情最主要的原因。</p>
+                       </div>
+                   </div>
+                   <div class="w3-center w3-half"  >
+                    <!-- YT連結 -->
+                       <iframe src="https://www.youtube.com/embed/QtgMc4oX5Kc" frameborder="0" style="width: 100%; height: 400px;"></iframe>
+                       <div class="w3-container w3-white" style="height: 270px;" >
+                           <!-- 放上標題及內文 -->
+                        <p><b>Python X Minecraft 基礎程式設計課程</b></p>
+                           <p class="w3-opacity">職位:教案設計、程式製作</p>
+                        <p>以Minecraft X Python的方式來引導小朋友進入Python的世界，一邊玩遊戲一邊學習程式語言，一開始會以CPR及Minecraft地圖帶領學生了解CPR及程式的基礎邏輯(循序、重複、選擇)，之後會以Python腳本及影片供學生體驗Python結合Minecraft的玩法，影片最後會提出本次教學的教學重點及目標，並提前體驗本次教學的成品，引起學習動機，在進入重點的程式教學。 </p>
+                       </div>
+                   </div>
+            <h2 class="w3-wide w3-center" id="VR">VR</h2>
+            <!-- 外部嵌入scratch的作品 -->
+                <div class="w3-center w3-margin-bottom"  >
+                 <!-- YT連結 -->
+                    <iframe src="https://www.youtube.com/embed/2yYF-RioIGY" frameborder="0" style="width: 100%; height: 500px;"></iframe>
+                    <div class="w3-container w3-white" style="height: 270px;" >
+                        <!-- 放上標題及內文 -->
+                     <p><b>兒童新樂園VR導覽</b></p>
+                        <p class="w3-opacity">職位:攝影、VR製作</p>
+                     <p>利用360相機，帶領使用者從士林捷運站前往兒童新樂園，並尋找兒童新樂園的遊客中心、AED，也可以體驗遊樂園的樂門設施。</p>
+                    </div>
+                </div>
+           </div>
+        </div>  
+    </div>
+
+    <script>
+        // 每4秒會幻燈片一次
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000);
+        }
+
+        // 移到選向上時格子會變色
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // 購票模式 如果點擊其他地方時會關閉視窗
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

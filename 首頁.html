@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 網頁標題 -->
+<title>CHI-HENG, LI</title>
+<!-- 網頁icon -->
+<link rel="icon" href="pic/icon.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--宣告css的樣式 外部連結-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+        display: none
+    }
+</style>
+
+<body>
+
+    <!-- 最上排的選單 當點擊時會使用myfunction的javascript class為css的樣式 -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="首頁.html" class="w3-bar-item w3-button w3-padding-large">首頁</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <!--類似下拉式選單 但只要滑過去就會下拉-->
+                <button class="w3-padding-large w3-button" title="More"><a href=醫教獎介紹.html style="text-decoration:none;">醫教獎介紹</a><i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                            <!--#是id超連結-->
+                    <a href="醫教獎介紹.html#創辦人" class="w3-bar-item w3-button">創辦人</a>
+                    <a href="醫教獎介紹.html#歷史" class="w3-bar-item w3-button">歷史</a>
+                    <a href="醫教獎介紹.html#創作理念" class="w3-bar-item w3-button">創作理念</a>
+                 </div>
+             </div>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <!--類似下拉式選單 但只要滑過去就會下拉-->
+                <button class="w3-padding-large w3-button" title="More"><a href=所有作品.html style="text-decoration:none;">所有作品</a><i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <!--#是id超連結-->
+                    <a href="所有作品.html#影片" class="w3-bar-item w3-button">影片</a>
+                    <a href="所有作品.html#APP" class="w3-bar-item w3-button">APP</a>
+                    <a href="所有作品.html#遊戲" class="w3-bar-item w3-button">遊戲</a>
+                    <a href="所有作品.html#遊戲" class="w3-bar-item w3-button">動畫</a>
+                    <a href="所有作品.html#遊戲" class="w3-bar-item w3-button">程式</a>
+                    <a href="所有作品.html#遊戲" class="w3-bar-item w3-button">VR</a>
+                </div>
+            </div>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <!--類似下拉式選單 但只要滑過去就會下拉-->
+                <button class="w3-padding-large w3-button" title="More"><a href=得獎作品.html style="text-decoration:none;">得獎作品</a><i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <!--#是id超連結-->
+                    <a href="得獎作品.html#最佳男主角" class="w3-bar-item w3-button">最佳男主角</a>
+                    <a href="得獎作品.html#最感動影片獎" class="w3-bar-item w3-button">最感動影片獎</a>
+                    <a href="得獎作品.html#最辛苦拍攝獎" class="w3-bar-item w3-button">最辛苦拍攝獎</a>
+                    <a href="得獎作品.html#最佳導演獎" class="w3-bar-item w3-button">最佳導演獎</a>
+                    <a href="得獎作品.html#最佳劇本獎" class="w3-bar-item w3-button">最佳劇本獎</a>
+                    <a href="得獎作品.html#最佳動畫" class="w3-bar-item w3-button">最佳動畫</a>
+                    <a href="得獎作品.html#最佳遊戲" class="w3-bar-item w3-button">最佳遊戲</a>
+                    <a href="得獎作品.html#最佳程式獎" class="w3-bar-item w3-button">最佳程式獎</a>
+                </div>
+            </div>
+            <a href="聯絡我.html" class="w3-bar-item w3-button w3-padding-large">聯絡我</a>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+                    class="fa fa-search"></i></a>
+        </div>
+    </div>
+
+    <!-- 有宣告myfuntion的javascript 移上去時會讓方塊變成灰色 -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#個人資料" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">個人資料</a>
+        <a href="#自我介紹" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">自我介紹</a>
+        <a href="#聯絡我" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">聯絡我</a>
+        <a href="#求學經歷" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">求學經歷</a>
+        <a href="#影片" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">影片</a>
+        <a href="#APP" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">APP</a>
+        <a href="#遊戲" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">遊戲</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+    </div>
+
+        <!-- 頁面內容及css樣式 -->
+        <div class="w3-content" style="max-width:1500px;margin-top:20px">
+            <!-- 圖片1幻燈片設定 有mySlides的javascript -->
+            <div class="mySlides w3-display-container w3-center">
+                <img src="pic/poster.png" style="width:95%;height: 70%;">
+            </div>
+        </div>
+
+
+    <script>
+        // 每4秒會幻燈片一次
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000);
+        }
+
+        // 移到選向上時格子會變色
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // 購票模式 如果點擊其他地方時會關閉視窗
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
